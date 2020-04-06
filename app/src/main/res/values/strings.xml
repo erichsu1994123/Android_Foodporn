@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">VeryHomePage</string>
+    <string name="login">Login</string>
+    <string name="userId">ID</string>
+    <string name="password">Password</string>
+    <string name="forget_pw">Forgot the password?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="account">account</string>
+
+
+
+
+
+<!--以下為老師摳過來的-->
+    <string name="text_tvUrl">Server URL</string>
+    <string name="text_btnSubmit">Submit</string>
+    <string name="text_btnConfirm">Confirm</string>
+    <string name="text_btnYes">Yes</string>
+    <string name="text_btnNo">No</string>
+    <string name="text_btnNewAccount">Create a new account</string>
+    <string name="text_btnLogin">Login</string>
+    <string name="text_btnCart">Shopping Cart</string>
+    <string name="text_btnProfile">Update Profile</string>
+    <string name="text_btnLogout">Logout</string>
+    <string name="text_UserId">User ID</string>
+    <string name="text_etUserPassword">Password</string>
+    <string name="text_etConfirmPassword">Confirm Password</string>
+    <string name="text_etName">Name</string>
+    <string name="text_etEmail">Email</string>
+    <string name="text_etPhone">Phone</string>
+    <string name="text_etAddress">Address</string>
+    <string name="text_BookQuantity">Quantity</string>
+    <string name="text_All">All</string>
+    <string name="text_ByDate">Search by Date</string>
+    <string name="text_StartDate">Start Date</string>
+    <string name="text_EndDate">End Date</string>
+    <string name="text_btnSearch">Search</string>
+    <string name="text_OrderId">Order ID</string>
+    <string name="text_Sum">Sum</string>
+    <string name="text_Customer">Customer</string>
+    <string name="text_Date">Date</string>
+    <string name="text_spCategory">Category:</string>
+    <string name="text_Books">Books:</string>
+
+    <string name="col_ISBN">ISBN</string>
+    <string name="col_Name">Name</string>
+    <string name="col_Author">Author</string>
+    <string name="col_Price">Price</string>
+    <string name="col_OrderId">Order ID</string>
+    <string name="col_OrderDate">Date</string>
+    <string name="col_OrderCustomer">Customer</string>
+    <string name="col_OrderSum">Sum</string>
+
+    <string name="cartAdd">Add</string>
+    <string name="cartRemove">Remove</string>
+    <string name="cartContents">Cart contents</string>
+    <string name="cartEmpty">Cart is empty</string>
+
+    <string name="btnCheckout">Checkout</string>
+    <string name="btnClearCart">Clear Cart</string>
+    <string name="btnOrderHistory">Your Orders</string>
+
+    <string name="hint_etUser">User name</string>
+    <string name="hint_etPassword">password</string>
+    <string name="hint_etUrl">Server URL</string>
+
+    <string-array name="cartBookQuantity">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+
+    <string name="msg_BooksNotFound">Books not found</string>
+    <string name="msg_InvalidUserOrPassword">Invalid user name or password</string>
+    <string name="msg_UserIdExist">User ID exists</string>
+    <string name="msg_AccountNotCreatedDueToErrorHappen">account not created due to error happens</string>
+    <string name="msg_InputEmpty">cannot be empty</string>
+    <string name="msg_ConfirmPasswordNotSameAsPassword">Confirm password not same as password</string>
+    <string name="msg_FailCreateAccount">Fail to create an account</string>
+    <string name="msg_SuccessfullyCreateAccount">Create an account successfully</string>
+    <string name="msg_NoProfileFound">No profile found</string>
+    <string name="msg_FailUpdateProfile">Fail to update profile</string>
+    <string name="msg_SuccessfullyUpdateProfile">Update profile successfully</string>
+    <string name="msg_NewQuantity">New quantity:</string>
+    <string name="msg_ClearCart">Clear cart？</string>
+    <string name="msg_EndDateNotLessThanStartDate">End date should not be less than start date</string>
+    <string name="msg_NumbersOfOrders">Numbers of orders:</string>
+    <string name="msg_NoNetwork">No network connection available</string>
+    <string name="msg_FailCreateOrder">Fail to create the order</string>
+    <string name="msg_NoOrderFound">No order found</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

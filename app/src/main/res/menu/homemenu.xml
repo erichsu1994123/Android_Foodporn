@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFirst"
+        android:icon="@drawable/ic_news"
+        android:title="home1" />
+
+    <item
+        android:id="@+id/homeSecond"
+        android:icon="@drawable/ic_settings"
+        android:title="home2" />
+
+    <item
+        android:id="@+id/homeThird"
+        android:icon="@drawable/ic_news"
+        android:title="home3" />
+
+    <item
+        android:id="@+id/homeFourth"
+        android:icon="@drawable/ic_settings"
+        android:title="home4" />
+</menu>

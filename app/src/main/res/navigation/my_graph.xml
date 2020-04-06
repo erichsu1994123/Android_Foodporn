@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_graph"
+    app:startDestination="@id/homeFirst">
+
+    <fragment
+        android:id="@+id/homeFirst"
+        android:name="com.example.veryhomepage.main.HomeFirstFragment"
+        android:label="fragment_home_first"
+        tools:layout="@layout/fragment_home_first" />
+    <fragment
+        android:id="@+id/homeSecond"
+        android:name="com.example.veryhomepage.main.HomeSecondFragment"
+        android:label="fragment_home_second"
+        tools:layout="@layout/fragment_home_second" />
+    <fragment
+        android:id="@+id/homeThird"
+        android:name="com.example.veryhomepage.main.HomeThirdFragment"
+        android:label="fragment_home_third"
+        tools:layout="@layout/fragment_home_third" />
+    <fragment
+        android:id="@+id/homeFourth"
+        android:name="com.example.veryhomepage.main.HomeFourthFragment"
+        android:label="fragment_home_fourth"
+        tools:layout="@layout/fragment_home_fourth" />
+</navigation>
