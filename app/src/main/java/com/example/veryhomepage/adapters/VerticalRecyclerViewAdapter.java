@@ -49,6 +49,9 @@ public class VerticalRecyclerViewAdapter extends RecyclerView.Adapter<VerticalRe
         return arrayList.size();
     }
 
+
+
+
     public class VerticalRVViewHolder extends RecyclerView.ViewHolder{
         RecyclerView recyclerView;
         TextView tvTitle;
