@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".order.CartActivity">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="685dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="613dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="123dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_cart"
+                android:layout_width="match_parent"
+                android:layout_height="407dp" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/tv_cellphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/tvPayMethod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/tvResult_PayMethod"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="請選擇付款方式" />
+
+            <TextView
+                android:id="@+id/tvCouponCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="有優惠碼嗎?" />
+
+            <TextView
+                android:id="@+id/tvResult_Coupon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="30dp"
+                android:text="total: 0"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnCheckout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnCheckout" />
+
+            <Button
+                android:id="@+id/btnEmptyCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/btnClearCart" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

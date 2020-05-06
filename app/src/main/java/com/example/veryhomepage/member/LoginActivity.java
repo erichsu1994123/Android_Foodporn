@@ -1,6 +1,7 @@
 package com.example.veryhomepage.member;
 
 //import android.content.Intent;
+
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,12 +14,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.veryhomepage.R;
 import com.example.veryhomepage.main.Util;
 import com.example.veryhomepage.task.CommonTask;
+import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
 public class LoginActivity extends AppCompatActivity {
     private static final String TAG = "LoginActivity";
     private TextView tvMessage;
-    private CommonTask isMemberTask;
+    private CommonTask isMemberTask, getMemberVOTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +65,41 @@ public class LoginActivity extends AppCompatActivity {
             preferences.edit().putBoolean("login", true)
                     .putString("account", account)
                     .putString("password", password).apply();
+            //嘗試preferences放進member_id
+            JsonObject jsonObject_member = new JsonObject();
+            jsonObject_member.addProperty("action", "findOneByAccountAndPassword");
+            jsonObject_member.addProperty("account", account);
+            jsonObject_member.addProperty("password", password);
+            String jsonOut_member = jsonObject_member.toString();
+            Log.e(TAG, "onLoginClick: jsonOut_member: "+ jsonOut_member);
+            getMemberVOTask = new CommonTask(Util.URL + "AnMemberServlet", jsonOut_member);
+            try {
+                String jsonIn = getMemberVOTask.execute().get();
+                Gson gson = new Gson();
+                Member member = gson.fromJson(jsonIn, Member.class);
+                Log.d(TAG, "onLoginClick: " + member);
+                String member_id = member.getMember_id();
+                String member_name = member.getMember_name();
+                String member_address = member.getMember_address();
+                String member_email = member.getEmail();
+                String member_cellphone = member.getCellphone();
+//                String member_creditcard = member.getMember_creditcard();
+                Log.d(TAG, "onLoginClick: " + member_name + member_address);
+
+                SharedPreferences preferences2 = getSharedPreferences(
+                        Util.PREF_FILE, MODE_PRIVATE);
+                preferences2.edit()
+                        .putString("member_id", member_id)
+                        .putString("member_name", member_name)
+                        .putString("member_address", member_address)
+                        .putString("member_cellphone", member_cellphone)
+                        .putString("member_email", member_email)
+//                        .putString("member_creditcard",member_creditcard)
+                        .apply();
+
+            } catch (Exception e) {
+                Log.e(TAG, e.toString());
+            }
             setResult(RESULT_OK);
             finish();
         } else {
@@ -78,7 +115,7 @@ public class LoginActivity extends AppCompatActivity {
     private boolean isMember(final String account, final String password) {
         boolean isMember = false;
         if (Util.networkConnected(this)) {
-            String url = Util.URL + "MemberServlet";
+            String url = Util.URL + "AnMemberServlet";
             JsonObject jsonObject = new JsonObject();
             jsonObject.addProperty("action", "isMember");
             jsonObject.addProperty("account", account);

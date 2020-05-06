@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.veryhomepage">
-
+    <!-- GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 網路方式定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 網路連線權限 -->
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -13,10 +15,42 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".livestream.MemberEditActivity"></activity>
+        <activity android:name=".livestream.Mp4FileActivity" />
+        <activity android:name=".livestream.LiveChatActivity" />
+        <activity android:name=".livestream.memberActivity" />
+        <activity android:name=".livestream.SeeTrailerActivity" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
 
+        <activity android:name=".livestream.LsTrailerActivity" />
+        <activity android:name=".order.AddressActivity" />
+        <activity android:name=".order.CreditCardActivity" />
+        <activity android:name=".order.CouponCodeActivity" />
+        <activity android:name=".order.PayMethodActivity" />
 
-        <activity android:name=".member.LoginActivity"></activity>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
 
+        <activity android:name=".order.DeliveryActivity" />
+        <activity android:name=".order.OrderHistoryActivity" />
+        <activity android:name=".order.OrderActivity" />
+        <activity android:name=".order.CartActivity" />
+        <activity android:name=".product.ProductDetailActivity" />
+        <activity android:name=".recipe.RecipeActivity" />
+        <activity android:name=".coupon.CouponActivity" />
+        <activity android:name=".member.LoginActivity" />
         <activity android:name=".main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

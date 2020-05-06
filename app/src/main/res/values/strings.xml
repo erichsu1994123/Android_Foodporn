@@ -8,10 +8,7 @@
     <string name="account">account</string>
 
 
-
-
-
-<!--以下為老師摳過來的-->
+    <!--以下為老師摳過來的-->
     <string name="text_tvUrl">Server URL</string>
     <string name="text_btnSubmit">Submit</string>
     <string name="text_btnConfirm">Confirm</string>
@@ -97,4 +94,83 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!--    locationEx摳過來-->
+    <string name="hint_etLocationName">location name or address</string>
+    <string name="text_btDistance">Distance</string>
+    <string name="text_btDirect">Direct</string>
+    <string name="msg_LastLocationNotAvailable">The last location is not available, please wait for a while</string>
+    <string name="msg_GoogleApiClientConnectionFailed">GoogleApiClient connection failed</string>
+    <string name="msg_GoogleApiClientConnectionSuspended">GoogleApiClient connection suspended</string>
+    <string name="msg_LocationNotAvailable">Location is not available</string>
+    <string name="msg_InvalidInput">Invalid input</string>
+    <string name="text_ShouldGrant">Permission to access location should be granted</string>
+
+    <string name="hiUser">Hi,</string>
+    <string name="dtime">日期時間</string>
+
+    <string name="search_hint">搜尋廚師或直播</string>
+    <string name="lsArea">直播專區</string>
+    <string name="isMember">已為會員?</string>
+    <string name="signUp">註冊</string>
+
+    <string name="password2">再次輸入密碼</string>
+    <string name="email">Email</string>
+    <string name="memberCount">會員帳號</string>
+    <string name="fan">粉絲人數</string>
+    <string name="following">追蹤中</string>
+    <string name="balance">餘額</string>
+    <string name="photo">Photo</string>
+    <string name="livestreamCollection">收藏直播</string>
+    <string name="recipeCollection">收藏食譜</string>
+    <string name="chiefCollection">收藏廚師</string>
+    <string name="fans">粉絲</string>
+    <string name="follow">追蹤</string>
+    <string name="name">姓名</string>
+    <string name="upload">上傳檔案</string>
+    <string name="trailer">直播預告</string>
+    <string name="trailerpic">上傳直播預告圖片</string>
+
+    <string name="lstitle">直播主題</string>
+    <string name="lsintro">直播簡介</string>
+    <string name="lspic">預告圖片</string>
+    <string name="lsdate">直播日期</string>
+    <string name="lstime">直播時間</string>
+    <string name="mustfill">必填</string>
+
+
+    <string name="logout">登出</string>
+
+
+    <string name="msg_NotUploadWithoutPicture">Not upload without picture</string>
+    <string name="msg_NoCameraApp">No camera app found</string>
+
+
+    <string name="text_NotGranted">not granted</string>
+
+
+    <string name="text_tvDate">Date</string>
+    <string name="text_tvTime">Time</string>
+    <string name="text_btnDatePicker">Date picker</string>
+    <string name="text_btnTimePicker">Time Picker</string>
+    <string name="text_Title">直播標題</string>
+    <string name="text_Intro">直播介紹</string>
+    <string name="text_Send">Send</string>
+    <string name="text_Connect">Connect</string>
+    <string name="text_Disconnect">Disconnect</string>
+    <string name="text_MessageEmpty">Message is empty!</string>
+    <string name="text_LeftChatRoom">Left chat room</string>
+    <string name="text_Name">User Name</string>
+    <string name="text_AllChat">All Chat</string>
+    <string name="text_TwoChat">Two Chat</string>
+
+    <string name="donate_apple">您對廚師斗內了蘋果</string>
+    <string name="donate_carrot">您對廚師斗內了蘿蔔</string>
+    <string name="donate_pizza">您對廚師斗內了披薩</string>
+    <string name="donate_donut">您對廚師斗內了甜甜圈</string>
+
+    <string name="dialog_title">斗內系統</string>
+    <string name="dialog_light">燈箱</string>
+
 </resources>

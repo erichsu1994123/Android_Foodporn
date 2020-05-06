@@ -11,9 +11,10 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.veryhomepage.R;
-import com.example.veryhomepage.adapters.VerticalRecyclerViewAdapter;
-import com.example.veryhomepage.adapters.models.HorizontalModel;
-import com.example.veryhomepage.adapters.models.VerticalModel;
+import com.example.veryhomepage.adapters_recyclerview.HorizontalRecyclerViewAdapter;
+import com.example.veryhomepage.adapters_recyclerview.models.HorizontalModel;
+import com.example.veryhomepage.coupon.CouponVO;
+import com.example.veryhomepage.recipe.RecipeVO;
 
 import java.util.ArrayList;
 
@@ -22,9 +23,11 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class RecyclerViewFragment extends Fragment {
+    private static final String TAG = "RecyclerViewFragment";
     private androidx.recyclerview.widget.RecyclerView verticalRecyclerView;
-    private ArrayList<VerticalModel> arrayListVertical;
-    private VerticalRecyclerViewAdapter adapter;
+    private ArrayList<HorizontalModel> arrayListVertical;
+    private HorizontalRecyclerViewAdapter adapter;
+
 
     public RecyclerViewFragment() {
         // Required empty public constructor
@@ -37,38 +40,46 @@ public class RecyclerViewFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_recycler_view, container, false);
     }
 
+
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         arrayListVertical = new ArrayList<>();
-        verticalRecyclerView = getActivity().findViewById(R.id.recyclerView);
+        verticalRecyclerView = getActivity().findViewById(R.id.recyclerView_cart);
         verticalRecyclerView.setHasFixedSize(true);
-        verticalRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL,false));
-
-        adapter = new VerticalRecyclerViewAdapter(getActivity(),arrayListVertical);
-
+        verticalRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+        adapter = new HorizontalRecyclerViewAdapter(getActivity(), arrayListVertical);
         verticalRecyclerView.setAdapter(adapter);
 
         setData();
     }
 
-    public void setData(){
-        for(int i=1;i<=10;i++) {
-            VerticalModel mVerticalModel = new VerticalModel();
-            mVerticalModel.setTitle("Title: " + i);
-            ArrayList<HorizontalModel> arrayList = new ArrayList<>();
+    public void setData() {
+        HorizontalModel mHorizontalModel = null;
 
-            for(int j=0;j<=10;j++) {
-                HorizontalModel mHorizontalModel = new HorizontalModel();
-                mHorizontalModel.setDescription("Description: "+j);
-                mHorizontalModel.setName("Name: "+j);
+        mHorizontalModel = new HorizontalModel();
+        mHorizontalModel.setTitle("優惠卷");
+        ArrayList<CouponVO> arrayList = new ArrayList<>();
+        CouponVO mCouponVO = new CouponVO();
+        arrayList.add(mCouponVO);
+        mHorizontalModel.setArrayList(arrayList);
+        arrayListVertical.add(mHorizontalModel);
 
-                arrayList.add(mHorizontalModel);
-            }
-            mVerticalModel.setArrayList(arrayList);
+//        mVerticalModel = new VerticalModel();
+//        mVerticalModel.setTitle("食材");
+//        ArrayList<ProductVO> arrayList1 = new ArrayList<>();
+//        ProductVO mProductVO = new ProductVO();
+//        arrayList1.add(mProductVO);
+//        mVerticalModel.setArrayList1(arrayList1);
+//        arrayListVertical.add(mVerticalModel);
 
-            arrayListVertical.add(mVerticalModel);
-        }
+        mHorizontalModel = new HorizontalModel();
+        mHorizontalModel.setTitle("熱門料理包");
+        ArrayList<RecipeVO> arrayList2 = new ArrayList<>();
+        RecipeVO mRecipeVO = new RecipeVO();
+        arrayList2.add(mRecipeVO);
+        mHorizontalModel.setArrayList2(arrayList2);
+        arrayListVertical.add(mHorizontalModel);
         adapter.notifyDataSetChanged();
     }
 }
